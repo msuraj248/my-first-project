@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+
+{% block body %}
+
+<form action="/result" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="form-group">
+            <label for="name">Enter Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" >
+        </div>
+        <div class="form-group">
+            <label for="age">Enter Age</label>
+            <input type="text" class="form-control" id="age" name="age" placeholder="Enter ur Age">
+        </div>
+        <div class="form-group">
+            <label for="Fever">Enter Fever</label>
+            <input type="text" class="form-control" id="Fever" name="Fever">
+        </div>
+        <div class="form-group">
+            <label for="Bodypain">Body Pain Select Any One</label>
+            <select class="col-sm-4" id="Bodypain" name="Bodypain">
+                <option value = "1" >yes</option>
+                <option value="0" >no</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="runnyNose">Runnynose Select Any One</label>
+            <select class="col-sm-4" id="runnyNose" name="runnyNose">
+                <option value = "1" >yes</option>
+                <option value="0" >no</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="BreathDiffl">Breathing Difficulty Select Any One</label>
+            <select class="col-sm-4" id="BreathDiffl" name="BreathDiffl">
+                <option value = "1" >yes</option>
+                <option value="0" >no</option>
+            </select>
+        </div>
+        <button class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+{% endblock body %}
